@@ -2,8 +2,10 @@ package presentation;
 
 import metier.Canard;
 import metier.CanardPlastique;
+import metier.Coincoin;
 import metier.Colvert;
 import metier.Leurre;
+import metier.VolerAvecDesAiles;
 
 public class Lanceur {
 
@@ -30,7 +32,15 @@ public class Lanceur {
 		c3.effectuerVol();
 		c3.nager();
 
-		
+		//avantage : changement de comportement facile
+		c3.setComportementCancan(new Coincoin());
+		c3.setComportementVol(new VolerAvecDesAiles());
+		System.out.println("----------------------------------------");
+		c3.afficher();
+		c3.effectuerCancan();
+		c3.effectuerVol();
+		c3.nager();
+
 
 	}
 
